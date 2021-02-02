@@ -1,0 +1,110 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel=preload as=font href=https://cdn.jsdelivr.net/gh/IEC-61499/IEC-61499.github.io@main/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin><link rel=preload as=font href=https://cdn.jsdelivr.net/gh/IEC-61499/IEC-61499.github.io@main/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/IEC-61499/IEC-61499.github.io@main/main.a20121902595cafc163ff7e76b367e83c05381c5dfca5b71758b735c18b8ae95afd65951ae7588778320bbd11886e0773fe492a4cba1ffcfc160ac14a4cfdd39.css integrity="sha512-ogEhkCWVyvwWP/fnazZ+g8BTgcXfyltxdYtzXBi4rpWv1llRrnWId4Mgu9EYhuB3P+SSpMuh/8/BYKwUpM/dOQ==" crossorigin=anonymous><noscript><style>img.lazyload{display:none}</style></noscript><meta name=robots content="index, follow"><meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><title>国内加速Github的几种方案 - IEC61499</title><meta name=description content="Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."><link rel=canonical href=/blog/%E5%9B%BD%E5%86%85%E5%8A%A0%E9%80%9Fgithub%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88/><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="/doks.png"><meta name=twitter:title content="国内加速Github的几种方案"><meta name=twitter:description content="GitHub 镜像访问 国内最常用的镜像地址：
+1. github.com.cnpmjs.org 2. hub.fastgit.org (推荐) 3. gitclone.com 网站的内容与GitHub完整同步，可进行下载克隆等操作。
+仓库克隆下载 原地址
+git clone https://github.com/docker/compose.git 改为
+git clone https://github.com.cnpmjs.org/docker/compose.git 或者
+git clone https://hub.fastgit.org/docker/compose.git 或者
+git clone https://gitclone.com/github.com/docker/compose.git Release下载加速 原地址
+wget https://github.com/golang/go/archive/go1.15.7.tar.gz 改为
+wget https://hub.fastgit.org/golang/go/archive/go1.15.7.tar.gz 免替换法 git config --global url.&#34;https://hub.fastgit.org&#34;.insteadOf https://github.com 查看git配置信息 git config --global --list 取消设置 git config --global --unset url.https://github.com/.insteadof raw文件下载加速 将 raw.githubusercontent.com 替换为 raw.staticdn.net 即可加速。
+原地址：
+wget https://raw.githubusercontent.com/kubernetes/kubernetes/master/README.md 替换为
+wget https://raw.staticdn.net/kubernetes/kubernetes/master/README.md GitHub + Jsdelivr CDN加速 jsDelivr 是一个免费开源的CDN 解决方案；"><meta name=twitter:site content="@henkverlinde"><meta name=twitter:creator content="@henkverlinde"><meta property="og:title" content="国内加速Github的几种方案"><meta property="og:description" content="GitHub 镜像访问 国内最常用的镜像地址：
+1. github.com.cnpmjs.org 2. hub.fastgit.org (推荐) 3. gitclone.com 网站的内容与GitHub完整同步，可进行下载克隆等操作。
+仓库克隆下载 原地址
+git clone https://github.com/docker/compose.git 改为
+git clone https://github.com.cnpmjs.org/docker/compose.git 或者
+git clone https://hub.fastgit.org/docker/compose.git 或者
+git clone https://gitclone.com/github.com/docker/compose.git Release下载加速 原地址
+wget https://github.com/golang/go/archive/go1.15.7.tar.gz 改为
+wget https://hub.fastgit.org/golang/go/archive/go1.15.7.tar.gz 免替换法 git config --global url.&#34;https://hub.fastgit.org&#34;.insteadOf https://github.com 查看git配置信息 git config --global --list 取消设置 git config --global --unset url.https://github.com/.insteadof raw文件下载加速 将 raw.githubusercontent.com 替换为 raw.staticdn.net 即可加速。
+原地址：
+wget https://raw.githubusercontent.com/kubernetes/kubernetes/master/README.md 替换为
+wget https://raw.staticdn.net/kubernetes/kubernetes/master/README.md GitHub + Jsdelivr CDN加速 jsDelivr 是一个免费开源的CDN 解决方案；"><meta property="og:type" content="article"><meta property="og:url" content="/blog/%E5%9B%BD%E5%86%85%E5%8A%A0%E9%80%9Fgithub%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88/"><meta property="og:image" content="/doks.png"><meta property="article:published_time" content="2021-01-01T11:08:49+08:00"><meta property="article:modified_time" content="2021-01-01T11:08:49+08:00"><meta property="og:site_name" content="IEC61499"><meta property="article:publisher" content="https://www.facebook.com/verlinde.henk"><meta property="article:author" content="https://www.facebook.com/verlinde.henk"><meta property="og:locale" content="en_US"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"\/blog\/%E5%9B%BD%E5%86%85%E5%8A%A0%E9%80%9Fgithub%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88\/"},"headline":"国内加速Github的几种方案","image":[],"datePublished":"2021-01-01T11:08:49CET","dateModified":"2021-01-01T11:08:49CET","author":{"@type":"Organization","name":"IEC61499"},"publisher":{"@type":"Organization","name":"IEC61499","logo":{"@type":"ImageObject","url":"\/logo-doks.png"}},"description":""}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"\/"},{"@type":"ListItem","position":2,"name":"Blog% E5%9 B% B D% E5%86%85% E5%8 A% A0% E9%80%9 Fgithub% E7%9 A%84% E5%87% A0% E7% A7%8 D% E6%96% B9% E6% A1%88","item":"\/blog%E5%9B%BD%E5%86%85%E5%8A%A0%E9%80%9Fgithub%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88\/"}]}</script><meta name=theme-color content="#fff"><link rel=apple-touch-icon sizes=180x180 href=https://cdn.jsdelivr.net/gh/IEC-61499/IEC-61499.github.io@main/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://cdn.jsdelivr.net/gh/IEC-61499/IEC-61499.github.io@main/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://cdn.jsdelivr.net/gh/IEC-61499/IEC-61499.github.io@main/favicon-16x16.png><link rel=manifest href=https://cdn.jsdelivr.net/gh/IEC-61499/IEC-61499.github.io@main/site.webmanifest></head><body class="blog single"><div class="header-bar fixed-top"></div><header class="navbar fixed-top navbar-expand-md navbar-light"><div class=container><input class="menu-btn order-0" type=checkbox id=menu-btn>
+<label class="menu-icon d-md-none" for=menu-btn><span class=navicon></span></label><a class="navbar-brand order-1 order-md-0 mr-auto" href=/>IEC61499</a>
+<button id=mode class="btn btn-link order-2 order-md-4" type=button aria-label="Toggle mode">
+<span class=toggle-dark><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span><span class=toggle-light><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span></button><ul class="navbar-nav social-nav order-3 order-md-5"></ul><div class="collapse navbar-collapse order-4 order-md-1"><ul class="navbar-nav main-nav mr-auto order-5 order-md-2"><li class=nav-item><a class=nav-link href=/book/prologue/introduction/>书籍</a></li><li class=nav-item><a class=nav-link href=/demo/>示例</a></li><li class=nav-item><a class=nav-link href=/docs/prologue/introduction/>4diac</a></li><li class=nav-item><a class=nav-link href=/hardware/>硬件</a></li><li class=nav-item><a class=nav-link href=/blog/>博客</a></li></ul><div class="break order-6 d-md-none"></div><form class="navbar-form flex-grow-1 order-7 order-md-3"><input id=userinput class="form-control is-search" type=search placeholder="Search docs..." aria-label="Search docs..." autocomplete=off><div id=suggestions class="shadow bg-white rounded"></div></form></div></div></header><div class="wrap container" role=document><div class=content><div class="row justify-content-center"><div class="col-md-12 col-lg-10 col-xl-8"><article><div class=blog-header><h1>国内加速Github的几种方案</h1><p><small>Posted January 1, 2021 by &nbsp;&dash;&nbsp;<strong>2&nbsp;min read</strong></small><p></div><p class=lead></p><h2 id=github-镜像访问>GitHub 镜像访问</h2><p>国内最常用的镜像地址：</p><h3 id=1-githubcomcnpmjsorghttpsgithubcomcnpmjsorg>1. <a href=https://github.com.cnpmjs.org>github.com.cnpmjs.org</a></h3><h3 id=2-hubfastgitorghttpshubfastgitorg-推荐>2. <a href=https://hub.fastgit.org>hub.fastgit.org</a> (推荐)</h3><h3 id=3-gitclonecomhttpsgitclonecom>3. <a href=https://gitclone.com>gitclone.com</a></h3><p>网站的内容与GitHub完整同步，可进行下载克隆等操作。</p><h4 id=仓库克隆下载>仓库克隆下载</h4><p>原地址</p><div class=highlight><pre class=chroma><code class=language-Shell data-lang=Shell>
+git clone https://github.com/docker/compose.git
+
+</code></pre></div><p>改为</p><div class=highlight><pre class=chroma><code class=language-Shell data-lang=Shell>
+git clone https://github.com.cnpmjs.org/docker/compose.git
+
+</code></pre></div><p>或者</p><div class=highlight><pre class=chroma><code class=language-Shell data-lang=Shell>
+git clone https://hub.fastgit.org/docker/compose.git
+
+</code></pre></div><p>或者</p><div class=highlight><pre class=chroma><code class=language-Shell data-lang=Shell>
+git clone https://gitclone.com/github.com/docker/compose.git
+
+</code></pre></div><h4 id=release下载加速>Release下载加速</h4><p>原地址</p><div class=highlight><pre class=chroma><code class=language-Shell data-lang=Shell>
+wget https://github.com/golang/go/archive/go1.15.7.tar.gz
+
+</code></pre></div><p>改为</p><div class=highlight><pre class=chroma><code class=language-Shell data-lang=Shell>
+wget https://hub.fastgit.org/golang/go/archive/go1.15.7.tar.gz
+
+</code></pre></div><h4 id=免替换法>免替换法</h4><div class=highlight><pre class=chroma><code class=language-Shell data-lang=Shell>
+git config --global url.<span class=s2>&#34;https://hub.fastgit.org&#34;</span>.insteadOf https://github.com
+
+</code></pre></div><h4 id=查看git配置信息>查看git配置信息</h4><div class=highlight><pre class=chroma><code class=language-Shell data-lang=Shell>
+git config --global --list
+
+</code></pre></div><h4 id=取消设置>取消设置</h4><div class=highlight><pre class=chroma><code class=language-Shell data-lang=Shell>
+git config --global --unset url.https://github.com/.insteadof
+
+</code></pre></div><h2 id=raw文件下载加速>raw文件下载加速</h2><p>将 raw.githubusercontent.com 替换为 raw.staticdn.net 即可加速。</p><p>原地址：</p><div class=highlight><pre class=chroma><code class=language-Shell data-lang=Shell>
+wget https://raw.githubusercontent.com/kubernetes/kubernetes/master/README.md
+
+</code></pre></div><p>替换为</p><div class=highlight><pre class=chroma><code class=language-Shell data-lang=Shell>
+wget https://raw.staticdn.net/kubernetes/kubernetes/master/README.md
+
+</code></pre></div><h2 id=github--jsdelivr-cdn加速>GitHub + Jsdelivr CDN加速</h2><p><a href=https://www.jsdelivr.com/>jsDelivr</a> 是一个免费开源的CDN 解决方案；</p><p>包含 JavaScript 库、jQuery 插件、CSS 框架、字体等常用的静态资源；</p><p>jsdelivr 不能获取 exe 文件以及 Release 处附加的 exe 和 dmg 文件。</p><h3 id=1-直接引用临时>1. 直接引用(临时)</h3><p>格式为：</p><p>https://cdn.jsdelivr.net/gh/&lt;用户名>/&lt;仓库名>/&lt;文件及路径></p><p>例如：GitHub</p><p><a href=https://github.com/qimage/pub/blob/main/avatar.webp>https://github.com/qimage/pub/blob/main/avatar.webp</a></p><p>转成 jsdelivr</p><p><a href=https://cdn.jsdelivr.net/gh/qimage/pub/avatar.webp>https://cdn.jsdelivr.net/gh/qimage/pub/avatar.webp</a></p><p>github.com 替换成 cdn.jsdelivr.net/gh</p><p>/blob/main 删除</p><h3 id=2-引入版本号推荐>2. 引入版本号(推荐)</h3><p>版本号用@符链接，格式为：</p><p>https://cdn.jsdelivr.net/gh/&lt;用户名>/&lt;仓库名>@版本号/&lt;文件及路径></p><p>例如：GitHub</p><p><a href=https://github.com/qimage/pub/blob/main/avatar.webp>https://github.com/qimage/pub/blob/main/avatar.webp</a></p><p>转成 jsdelivr</p><p><a href=https://cdn.jsdelivr.net/gh/qimage/pub@main/avatar.webp>https://cdn.jsdelivr.net/gh/qimage/pub@main/avatar.webp</a></p><p>github.com 替换成 cdn.jsdelivr.net/gh</p><p>/blob/ 替换成 @</p><p>注：main为创建的版本号</p><p>建议使用发布版本号方案，只要单次版本号下的内容大小不超过50M即可，超过50M时使用多版本号。</p><p>需要jsDelivr缓存实时刷新，只需将想刷新的链接的开头的</p><pre><code class=language-Code data-lang=Code>https://cdn.jsdelivr.net/
+
+</code></pre><p>替换成</p><pre><code class=language-Code data-lang=Code>
+https://purge.jsdelivr.net/
+
+</code></pre><p>即可实时刷新，刷新成功后，浏览器会返回缓存刷新成功的信息。</p><h2 id=修改hosts文件进行加速>修改HOSTS文件进行加速</h2><h3 id=1-查询相关域名ip地址>1. 查询相关域名IP地址</h3><p>通过 <a href=https://www.ipaddress.com/>ipaddress.com</a> 查询</p><p><a href=https://fastly.net.ipaddress.com/github.global.ssl.fastly.net>github.global.ssl.fastly.net</a></p><p><a href=https://github.com.ipaddress.com/>github.com</a></p><h3 id=2-修改host文件映射查找到的ip地址>2. 修改host文件映射查找到的IP地址</h3><p>windows系统中修改C:\Windows\System32\drivers\etc\hosts文件的权限，指定可写入；</p><p>ubuntu系统中修改/etc/hosts文件；</p><p>用编辑器打开hosts文件，在末尾处添加以下内容：</p><pre><code class=language-Code data-lang=Code>
+199.232.69.194 github.global.ssl.fastly.net
+140.82.112.4 github.com
+
+</code></pre><p>同时也可以查询其他域名地址，解决DNS污染问题。</p><p>可以直接选中以下内容复制粘贴，20210126更新</p><pre><code class=language-Code data-lang=Code>
+# GitHub Start 
+140.82.113.3       github.com
+140.82.114.20      gist.github.com
+151.101.184.133    assets-cdn.github.com
+151.101.184.133    raw.githubusercontent.com
+199.232.28.133     raw.githubusercontent.com 
+151.101.184.133    gist.githubusercontent.com
+151.101.184.133    cloud.githubusercontent.com
+151.101.184.133    camo.githubusercontent.com
+199.232.96.133     avatars.githubusercontent.com
+151.101.184.133    avatars0.githubusercontent.com
+199.232.68.133     avatars0.githubusercontent.com
+199.232.28.133     avatars0.githubusercontent.com 
+199.232.28.133     avatars1.githubusercontent.com
+151.101.184.133    avatars1.githubusercontent.com
+151.101.108.133    avatars1.githubusercontent.com
+151.101.184.133    avatars2.githubusercontent.com
+199.232.28.133     avatars2.githubusercontent.com
+151.101.184.133    avatars3.githubusercontent.com
+199.232.68.133     avatars3.githubusercontent.com
+151.101.184.133    avatars4.githubusercontent.com
+199.232.68.133     avatars4.githubusercontent.com
+151.101.184.133    avatars5.githubusercontent.com
+199.232.68.133     avatars5.githubusercontent.com
+151.101.184.133    avatars6.githubusercontent.com
+199.232.68.133     avatars6.githubusercontent.com
+151.101.184.133    avatars7.githubusercontent.com
+199.232.68.133     avatars7.githubusercontent.com
+151.101.184.133    avatars8.githubusercontent.com
+199.232.68.133     avatars8.githubusercontent.com
+199.232.96.133     avatars9.githubusercontent.com
+# GitHub End
+
+</code></pre><h3 id=3-本地dns刷新>3. 本地DNS刷新</h3><p>windows中若遇到网络异常，可能是DNS缓存的问题，可以命令刷新。</p><div class=highlight><pre class=chroma><code class=language-Shell data-lang=Shell>
+ipconfig /displaydns <span class=c1># 显示dns缓存 </span>
+ipconfig /flushdns   <span class=c1># 刷新DNS记录</span>
+ipconfig /renew      <span class=c1># 重请从DHCP服务器获得IP</span>
+
+</code></pre></div><p>ubuntu中重启网络</p><div class=highlight><pre class=chroma><code class=language-Shell data-lang=Shell>
+sudo /etc/init.d/networking restart
+
+</code></pre></div><h2 id=通过-gitee-导入github仓库进行中转下载>通过 Gitee 导入Github仓库进行中转下载</h2><p>访问 <a href=https://gitee.com/>gitee</a> 并登录，在顶部选择“从 GitHub/GitLab 导入仓库”。</p><p>导入后，若源站更新，Gitee导入仓库需要强制更新同步。</p><p><a href=https://gitee.com/mirrors>Gitee 极速下载</a>，热门仓库每日同步一次。</p><h2 id=github-文件加速>GitHub 文件加速</h2><p>利用 Cloudflare Workers提供GitHub 文件 , Releases , archive 以及 raw.githubusercontent.com 文件加速下载服务。</p><p>开源项目地址: <a href=https://github.com/hunshcn/gh-proxy>https://github.com/hunshcn/gh-proxy</a></p><p>部署独立地址: <a href=https://ghproxy.com/>https://ghproxy.com/</a></p><h2 id=结束语>结束语</h2><blockquote><p>以上方案为均来自网络，结合操作实验整理而成。</p></blockquote></article></div></div></div></div><footer class="footer text-muted"><div class=container><div class=row><div class="col-lg-8 order-last order-lg-first"><ul class=list-inline><li class=list-inline-item>Powered by <a href=https://gohugo.io/>Hugo</a>, and <a href=https://getdoks.org/>Doks</a></li></ul></div><div class="col-lg-8 order-first order-lg-last text-lg-right"><ul class=list-inline></ul></div></div></div></footer><script src=https://cdn.jsdelivr.net/gh/IEC-61499/IEC-61499.github.io@main/main.f6b484f556ad1f3bcf6061082139a2f21fa759f13930c39a25fe4a9f78f35e64122c2d86dffd56e67b292dabbda4095d8077194f196e0e348441c106a9f3d40e.js integrity="sha512-9rSE9VatHzvPYGEIITmi8h+nWfE5MMOaJf5Kn3jzXmQSLC2G3/1W5nspLau9pAldgHcZTxluDjSEQcEGqfPUDg==" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/gh/IEC-61499/IEC-61499.github.io@main/index.min.1388ce41c41fe4729612ec4e8bf69d1f4c0bc2cf9bcb040a1757c7ac8c3464046974aa444f4dcfaaf707dc5ba4199863d8cc4e5265b88aed7509341add3fe090.js integrity="sha512-E4jOQcQf5HKWEuxOi/adH0wLws+bywQKF1fHrIw0ZARpdKpET03PqvcH3FukGZhj2MxOUmW4iu11CTQa3T/gkA==" crossorigin=anonymous defer></script></body></html>

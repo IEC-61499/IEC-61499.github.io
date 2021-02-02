@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on</title><link>/blog/</link><description>Recent content in 博客 on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 01 Feb 2021 08:49:55 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Say hello to Doks 👋</title><link>/blog/say-hello-to-doks/</link><pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate><guid>/blog/say-hello-to-doks/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on</title><link>/blog/</link><description>Recent content in 博客 on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 01 Feb 2021 08:49:55 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>国内加速Github的几种方案</title><link>/blog/%E5%9B%BD%E5%86%85%E5%8A%A0%E9%80%9Fgithub%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88/</link><pubDate>Fri, 01 Jan 2021 11:08:49 +0800</pubDate><guid>/blog/%E5%9B%BD%E5%86%85%E5%8A%A0%E9%80%9Fgithub%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88/</guid><description>GitHub 镜像访问 国内最常用的镜像地址：
+1. github.com.cnpmjs.org 2. hub.fastgit.org (推荐) 3. gitclone.com 网站的内容与GitHub完整同步，可进行下载克隆等操作。
+仓库克隆下载 原地址
+git clone https://github.com/docker/compose.git 改为
+git clone https://github.com.cnpmjs.org/docker/compose.git 或者
+git clone https://hub.fastgit.org/docker/compose.git 或者
+git clone https://gitclone.com/github.com/docker/compose.git Release下载加速 原地址
+wget https://github.com/golang/go/archive/go1.15.7.tar.gz 改为
+wget https://hub.fastgit.org/golang/go/archive/go1.15.7.tar.gz 免替换法 git config --global url.&amp;#34;https://hub.fastgit.org&amp;#34;.insteadOf https://github.com 查看git配置信息 git config --global --list 取消设置 git config --global --unset url.https://github.com/.insteadof raw文件下载加速 将 raw.githubusercontent.com 替换为 raw.staticdn.net 即可加速。
+原地址：
+wget https://raw.githubusercontent.com/kubernetes/kubernetes/master/README.md 替换为
+wget https://raw.staticdn.net/kubernetes/kubernetes/master/README.md GitHub + Jsdelivr CDN加速 jsDelivr 是一个免费开源的CDN 解决方案；</description></item><item><title>借用阿里云实现IPV6的动态域名解析</title><link>/blog/%E5%80%9F%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%AE%9E%E7%8E%B0ipv6%E7%9A%84%E5%8A%A8%E6%80%81%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/</link><pubDate>Mon, 13 Jan 2020 11:04:49 +0800</pubDate><guid>/blog/%E5%80%9F%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%AE%9E%E7%8E%B0ipv6%E7%9A%84%E5%8A%A8%E6%80%81%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/</guid><description>目标 由于电信运营商改造后IPV4变成内网固定IP，使得内网穿透变得更加麻烦。
+虽然运营商提供的全网IPV6地址没有时间限制，但是断网后或者宽带重拔后IPV6依然会重新分配更新，所以还是需要使用IPV6动态域名解析。
+原理 使用GO版本的客户端调用阿里云云解析API，实现IPV6的动态域名解析。
+参照https://github.com/honwen/aliyun-ddns-cli实现。
+阿里云设置 右上角用户 / 访问控制 / 人员管理 / 用户 / 创建用户
+填写登录名称，显示名称，选择编程访问启用 AccessKey ID 和 AccessKey Secret；
+记录AccessKey以便后面使用，设置用户权限为AliyunDNSFullAccess。
+执行命令 环境变量：
+AccessKeyID 阿里云访问ID
+AccessKeySecret 阿里云访问密钥
+aliyun-ddns-cli --id ${AccessKeyID} --secret ${AccessKeySecret} --ipapi http://v6.ipv6-test.com/api/myip.php auto-update -6 --domain qu.js.cn -r 600 结束语 目前移动网络已支持IPV6，固定宽带需要路由器支持IPV6，80端口封禁，443端口有可能开启。</description></item></channel></rss>
