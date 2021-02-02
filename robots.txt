@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://iec61499.com.cn/sitemap.xml
+Sitemap: /sitemap.xml
